@@ -1,10 +1,10 @@
-import '@blocksuite/presets/themes/affine.css';
+// import '@blocksuite/presets/themes/affine.css';
 import { AffineEditorContainer } from '@blocksuite/presets';
-import { Doc, Schema } from '@blocksuite/store';
+import { Schema } from '@blocksuite/store';
 import { DocCollection } from '@blocksuite/store';
 import { AffineSchemas } from '@blocksuite/blocks';
 
-export function initEditor() {
+export async function initEditor() {
   const schema = new Schema().register(AffineSchemas);
   const collection = new DocCollection({ schema });
   collection.meta.initialize();
@@ -19,9 +19,11 @@ export function initEditor() {
 
   const editor = new AffineEditorContainer();
   editor.doc = doc;
-  editor.slots.docLinkClicked.on(({ docId }) => {
-    const target = <Doc>collection.getDoc(docId);
-    editor.doc = target;
-  });
+  // editor.slots.docLinkClicked.on(({ docId }) => {
+  //   const target = <Doc>collection.getDoc(docId);
+  //   editor.doc = target;
+  // });
+  // await editor.updateComplete;
+
   return { editor, collection };
 }
