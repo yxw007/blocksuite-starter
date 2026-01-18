@@ -4,6 +4,7 @@ import { initEditor } from './editor/editor';
 import { effects as blocksEffects } from '@blocksuite/blocks/effects';
 import { effects as presetsEffects } from '@blocksuite/presets/effects';
 
+debugger
 blocksEffects();
 presetsEffects();
 

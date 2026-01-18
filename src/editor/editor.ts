@@ -1,4 +1,3 @@
-// import '@blocksuite/presets/themes/affine.css';
 import { AffineEditorContainer } from '@blocksuite/presets';
 import { Schema } from '@blocksuite/store';
 import { DocCollection } from '@blocksuite/store';
